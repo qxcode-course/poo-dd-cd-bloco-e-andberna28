@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-01_18-57-25",
+            "content": "@@ -32,46 +32,10 @@\n self\n-, nome: str):%0A        self.nome = nome\n+):\n %0A   \n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-12-01_18-58-27",
+            "content": "@@ -79,495 +79,4 @@\n     \n-%0A    def aprensentar_nome(self):%0A        print(f%22Eu sou um(a) %7Bself.nome%7D%22)%0A%0Aclass Tatu(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A%0A    def fazer_som(self):%0A        print(%22Fa%C3%A7o *sons de tatu*%22)%0A%0A    def mover(self):%0A        print(%22Me encolho em formato de bola%22)%0A%0A    def apresentar(self, animal: Animal):%0A        print(f%22%7Bself.aprensentar_nome%7D%5Cn%7Bself.fazer_som()%7D%5Cn%7Bself.mover()%7D%5CnTipo de animal: %7Banimal%7D%22)%0A%0Aanimal = Animal(%22Animal Generico%22)%0Aprint(animal)\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-12-01_19-11-11",
+            "content": "@@ -531,20 +531,31 @@\n l = \n-Tatu(%22Rammus\n+Animal(%22Animal Generico\n %22)%0Ap\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-12-01_19-13-27",
+            "content": "@@ -522,62 +522,8 @@\n %22)%0A%0A\n-    def __str__(self):%0A        return f%22%7Bself.nome%7D%22%0A%0A\n anim\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-12-01_19-14-47",
+            "content": "@@ -600,34 +600,8 @@\n s%22)%0A\n-animal.aprensentar_nome()%0A\n prin\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-12-01_19-15-13",
+            "content": "@@ -131,16 +131,17 @@\n %22Eu \n-me chamo\n+sou um(a)\n  %7Bse\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-12-01_19-15-35",
+            "content": "@@ -625,27 +625,8 @@\n e()%0A\n-animal.fazer_som()%0A\n prin\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-12-01_19-15-52",
+            "content": "@@ -644,25 +644,13 @@\n m()%0A\n-animal.apresentar\n+print\n (ani\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-12-01_19-16-23",
+            "content": "class Animal:\n    def __init__(self, nome: str):\n        self.nome = nome\n        \n    def aprensentar_nome(self):\n        print(f\"Eu me chamo {self.nome}\")\n\nclass Tatu(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print(\"Fa\u00e7o *sons de tatu*\")\n\n    def mover(self):\n        print(\"Me encolho em formato de bola\")\n\n    def apresentar(self, animal: Animal):\n        print(f\"{self.aprensentar_nome}\\n{self.fazer_som()}\\n{self.mover()}\\nTipo de animal: {animal}\")\n\n    def __str__(self):\n        return f\"{self.nome}\"\n\nanimal = Tatu(\"Rammus\")\nanimal.aprensentar_nome()\nanimal.fazer_som()\nanimal.apresentar(animal)",
+            "lines": "27"
+        }
+    ]
+}
