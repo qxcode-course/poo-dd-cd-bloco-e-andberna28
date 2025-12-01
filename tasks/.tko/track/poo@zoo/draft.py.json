@@ -42,8 +42,13 @@
         },
         {
             "label": "2025-12-01_19-16-23",
-            "content": "class Animal:\n    def __init__(self, nome: str):\n        self.nome = nome\n        \n    def aprensentar_nome(self):\n        print(f\"Eu me chamo {self.nome}\")\n\nclass Tatu(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print(\"Fa\u00e7o *sons de tatu*\")\n\n    def mover(self):\n        print(\"Me encolho em formato de bola\")\n\n    def apresentar(self, animal: Animal):\n        print(f\"{self.aprensentar_nome}\\n{self.fazer_som()}\\n{self.mover()}\\nTipo de animal: {animal}\")\n\n    def __str__(self):\n        return f\"{self.nome}\"\n\nanimal = Tatu(\"Rammus\")\nanimal.aprensentar_nome()\nanimal.fazer_som()\nanimal.apresentar(animal)",
+            "content": "@@ -1,16 +1,4 @@\n-import abc%0A%0A\n clas\n@@ -9,17 +9,8 @@\n imal\n-(abc.ABC)\n :%0A  \n@@ -640,8 +640,33 @@\n r_som()%0A\n+animal.apresentar(animal)\n",
             "lines": "27"
+        },
+        {
+            "label": "2025-12-01_19-19-55",
+            "content": "import abc\n\nclass Animal(abc.ABC):\n    def __init__(self, nome: str):\n        self.nome = nome\n        \n    def aprensentar_nome(self):\n        print(f\"Eu me chamo {self.nome}\")\n\nclass Tatu(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print(\"Fa\u00e7o *sons de tatu*\")\n\n    def mover(self):\n        print(\"Me encolho em formato de bola\")\n\n    def apresentar(self, animal: Animal):\n        print(f\"{self.aprensentar_nome}\\n{self.fazer_som()}\\n{self.mover()}\\nTipo de animal: {animal}\")\n\n    def __str__(self):\n        return f\"{self.nome}\"\n\nanimal = Tatu(\"Rammus\")\nanimal.aprensentar_nome()\nanimal.fazer_som()\n",
+            "lines": "28"
         }
     ]
 }
