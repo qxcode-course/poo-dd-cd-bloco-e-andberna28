@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-09_18-59-36",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id: str, tipo: str, horaEntrada: int):\n        self.id = id\n        self.tipo = tipo\n        self.horaEntrada = horaEntrada\n\n    def setEntrada(self, value: str):\n        self.horaEntrada = value\n    def getEntrada(self):\n        return self.horaEntrada\n    \n    def getTipo(self):\n        return self.tipo\n    def getId(self):\n        return self.id\n    \n    @abstractmethod\n    def calcularValor(self, horaSaida: int):\n        pass\n\n    def __str__(self):\n        return f\"\"\n\nclass Bike(Veiculo):\n    def",
+            "lines": "27"
+        }
+    ]
+}
