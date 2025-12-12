@@ -4,9 +4,19 @@ class Animal(abc.ABC):
     def __init__(self, nome: str):
         self.nome = nome
         
-    def aprensentar_nome(self):
-        print(f"Eu me chamo {self.nome}")
+    def apresentar_nome(self):
+        print(f"Eu sou {self.nome}")
+    
+    @abc.abstractmethod
+    def fazer_som(self):
+        pass
 
+    @abc.abstractmethod
+    def mover(self):
+        pass
+    
+    def __str__(self):
+        return self.nome
 class Tatu(Animal):
     def __init__(self, nome: str):
         super().__init__(nome)
@@ -15,14 +25,41 @@ class Tatu(Animal):
         print("Faço *sons de tatu*")
 
     def mover(self):
-        print("Me encolho em formato de bola")
+        print("Eu me enrolo como uma bola e rolo pelo chão")
 
-    def apresentar(self, animal: Animal):
-        print(f"{self.aprensentar_nome}\n{self.fazer_som()}\n{self.mover()}\nTipo de animal: {animal}")
+class Leao(Animal):
+    def __init__(self, nome: str):
+        super().__init__(nome)
 
-    def __str__(self):
-        return f"{self.nome}"
+    def fazer_som(self):
+        print("ROOOOARRR")
 
-animal = Tatu("Rammus")
-animal.aprensentar_nome()
-animal.fazer_som()
+    def mover(self):
+        print("Eu caminho pela savana")
+
+
+class Cobra(Animal):
+    def __init__(self, nome: str):
+        super().__init__(nome)
+
+    def fazer_som(self):
+        print("Sssssssssss")
+
+    def mover(self):
+        print("Eu deslizo pelo chão")
+
+def apresentar(animal: Animal):
+    animal.apresentar_nome()
+    animal.fazer_som()
+    animal.mover()
+    print(f"Tipo da classe: {type(animal).__name__}")
+    print("-" * 40)
+
+animais = [
+    Tatu("Rammus"),
+    Leao("Simba"),
+    Cobra("Nagini")
+]
+
+for a in animais:
+    apresentar(a)
